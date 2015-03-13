@@ -6,7 +6,7 @@ print "START: Core SWF Assets" . PHP_EOL;
 
 $outdir = "./kcs";
 if (!mkdir($outdir, 0755, true)) print "WARNING: Can't make directory. Maybe it already exists? If so, ignore this error." . PHP_EOL;
-$core = array("Core.swf", "mainD2.swf", "PortMain.swf");
+$core = array("Core.swf", "mainD2.swf", "PortMain.swf" "maintenance.swf", "ban.swf");
 
 foreach($core as $f) {
 	set_time_limit(30);
@@ -41,6 +41,7 @@ foreach($scenes as $f) {
 	print "GET: {$f} ... ";
 	
 	$ch = curl_init();
+	// Could change this; this is the server my account is on. Suit yourself...
 	curl_setopt($ch, CURLOPT_URL, "http://203.104.209.39/kcs/scenes/{$f}");
 	curl_setopt($ch, CURLOPT_FAILONERROR, true);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -68,6 +69,7 @@ foreach($assets as $f) {
 	print "GET: {$f} ... ";
 	
 	$ch = curl_init();
+	// Could change this; this is the server my account is on. Suit yourself...
 	curl_setopt($ch, CURLOPT_URL, "http://203.104.209.39/kcs/resources/swf/{$f}");
 	curl_setopt($ch, CURLOPT_FAILONERROR, true);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
