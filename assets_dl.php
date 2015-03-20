@@ -6,7 +6,7 @@ print "START: Core SWF Assets" . PHP_EOL;
 
 $outdir = "./kcs";
 if (!mkdir($outdir, 0755, true)) print "WARNING: Can't make directory. Maybe it already exists? If so, ignore this error." . PHP_EOL;
-$core = array("Core.swf", "mainD2.swf", "PortMain.swf" "maintenance.swf", "ban.swf");
+$core = array("Core.swf", "mainD2.swf", "PortMain.swf", "maintenance.swf", "ban.swf");
 
 foreach($core as $f) {
 	set_time_limit(30);
