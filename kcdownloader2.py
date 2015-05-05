@@ -104,9 +104,9 @@ if os.path.isfile("data/api_start2.json"):
 	get_shipGirlGFX("data/api_start2.json")
 
 	print("...Finish")
-	sys.exit()
+	exit()
 else:
 	print("Error! Can't find the api_start2.json file.")
 	print("This is fixable. Make a directory called 'data' and place the JSON dump (obtained from KCT or through other means) as 'api_start2.json' there.")
 	print("You can modify this script to change the path the script's looking for, but please - if it ain't broke, don't fix it.")
-	sys.exit()
+	exit()
